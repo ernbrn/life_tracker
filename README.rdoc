@@ -1,28 +1,10 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+*Start on Forms page to decide which form you'd like to fill out: Schools or Life Events.
 
-Things you may want to cover:
+*Schools: You can fill out where you went to school, when you started, and when you left. All
+forms MUST be filled out to submit.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+*Life Events: You can fill out the event title, the date it occurred, and a brief
+ description. **NOTE** Your description of your life event may not exceed 140 characters.
+ Sorry, them's the rules.

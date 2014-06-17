@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :forms
+
   resources :life_events
 
   resources :schools
