@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :person_id, "Your name" %><br>
+    <%= f.collection_select :person_id, Person.all, :id, :your_name %>
+  </div>
+
+  <div class="field">
     <%= f.label :school_name %><br>
     <%= f.text_field :school_name %>
   </div>

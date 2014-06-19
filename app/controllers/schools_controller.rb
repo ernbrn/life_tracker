@@ -69,6 +69,6 @@ class SchoolsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def school_params
-      params.require(:school).permit(:school_name, :string, :beginning_year, :string, :ending_year, :string)
+      params.require(:school).permit(:school_name,:beginning_year, :ending_year, :person_id)
     end
 end
