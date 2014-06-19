@@ -1,7 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+<<<<<<< HEAD
   name: MyString
 
 two:
   name: MyString
+=======
+  your_name: MyString
+
+two:
+  your_name: MyString
+>>>>>>> june18hw

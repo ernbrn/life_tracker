@@ -10,6 +10,11 @@ class PeopleController < ApplicationController
   # GET /people/1
   # GET /people/1.json
   def show
+<<<<<<< HEAD
+=======
+    @schools = @person.schools
+    @life_events = @person.life_events
+>>>>>>> june18hw
   end
 
   # GET /people/new
@@ -69,6 +74,10 @@ class PeopleController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def person_params
+<<<<<<< HEAD
       params.require(:person).permit(:name)
+=======
+      params.require(:person).permit(:your_name)
+>>>>>>> june18hw
     end
 end

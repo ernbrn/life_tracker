@@ -1,9 +1,52 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+<<<<<<< HEAD
   <strong>Name:</strong>
   <%= @person.name %>
 </p>
 
 <%= link_to 'Edit', edit_person_path(@person) %> |
+=======
+  <strong>Your name:</strong>
+  <%= @person.your_name %>
+</p>
+
+<p>
+  <strong>Life Events: <br><br></strong>
+
+  <tbody>
+    <% @life_events.each do |life_event| %>
+      <tr>
+        <td><strong>Event Name:<br></strong></td>
+        <td><%= life_event.event_title %><br></td>
+        <td><strong>Event Date:</strong><br></td>
+        <td><%= life_event.date %><br></td>
+        <td><strong>Event Description:</strong><br></td>
+        <td><%= life_event.description %><br></td>
+        <%end %>
+      </tbody>
+</p>
+
+
+<p>
+  <strong> Schools <br><br></strong>
+      <tbody>
+        <% @schools.each do |school| %>
+          <tr>
+            <td><strong>School Name:<br></strong></td>
+            <td><%= school.school_name %><br></td>
+            <td><strong>School Start Date:<br></strong></td>
+            <td><%= school.beginning_year %><br></td>
+            <td><strong>School End Date:<br></strong></td>
+            <td><%= school.ending_year %><br></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </p>
+
+
+
+
+>>>>>>> june18hw
 <%= link_to 'Back', people_path %>
