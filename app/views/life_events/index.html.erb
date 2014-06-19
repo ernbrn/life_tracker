@@ -1,4 +1,4 @@
-<h1>Listing life_events</h1>
+<h1>Life Events</h1>
 
 <table>
   <thead>
@@ -12,7 +12,7 @@
   </thead>
 
   <tbody>
-    <% @life_events.each do |life_event| %>
+    <% @life_events.order(date: :desc).each do |life_event| %>
       <tr>
         <td><%= life_event.person.your_name %></td>
         <td><%= life_event.event_title %></td>
@@ -28,6 +28,6 @@
 
 <br>
 
-<%= link_to 'New Life event', new_life_event_path %>
+<%= link_to 'New Life Event  |  ', new_life_event_path %>
 
 <%= link_to "Back Home", root_path %>
