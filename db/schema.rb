@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20140618182206) do
-=======
 ActiveRecord::Schema.define(version: 20140618202816) do
->>>>>>> june18hw
 
   create_table "forms", force: true do |t|
     t.datetime "created_at"
@@ -37,12 +33,6 @@ ActiveRecord::Schema.define(version: 20140618202816) do
     t.datetime "updated_at"
   end
 
-  create_table "people", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "schools", force: true do |t|
     t.string   "school_name"
     t.string   "string"
@@ -50,11 +40,8 @@ ActiveRecord::Schema.define(version: 20140618202816) do
     t.string   "ending_year"
     t.datetime "created_at"
     t.datetime "updated_at"
-<<<<<<< HEAD
     t.boolean  "graduated"
-=======
     t.integer  "person_id"
->>>>>>> june18hw
   end
 
 end

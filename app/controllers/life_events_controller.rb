@@ -11,6 +11,7 @@ class LifeEventsController < ApplicationController
   # GET /life_events/1
   # GET /life_events/1.json
   def show
+    @person = Person.all
   end
 
   # GET /life_events/new

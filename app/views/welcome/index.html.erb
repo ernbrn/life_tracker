@@ -1,20 +1,35 @@
+<div class="header">
+<div class = "row">
+  <div class= "large-2 columns">
+  </div>
+
+<div class= "large-8 large-centered columns">
 <h1>Hey! Fill Out Some Forms! </h1>
+</div>
 
-<h2> Here are some recent ones: </h2>
+<div class= "large-2 columns">
+</div>
+</div>
+</div>
 
+
+<div class = "row">
+<h2 class= "subheader"> Here are some recent ones: </h2>
 <p>
 
   <p>
-    <strong>Life Events: <br><br></strong>
+    <h3 class="subheader">Life Events: <br></h3>
 
     <tbody>
-      <% @life_events.each do |life_event| %>
+      <% @life_events.order(date: :desc).each do |life_event| %>
         <tr>
-          <td><strong>Event Name:<br></strong></td>
+          <td><h4 class= "subheader">Name:</h4></td>
+          <td><%= life_event.person.your_name %></td>
+          <td><h5>Event Name:</h5></td>
           <td><%= life_event.event_title %><br></td>
-          <td><strong>Event Date:</strong><br></td>
+          <td><h5>Event Date:</h5><br></td>
           <td><%= life_event.date %><br></td>
-          <td><strong>Event Description:</strong><br></td>
+          <td><h5>Event Description:</h5><br></td>
           <td><%= life_event.description %><br></td>
           <%end %>
         </tbody>
@@ -24,17 +39,30 @@
   <p>
     <strong> Schools <br><br></strong>
         <tbody>
-          <% @schools.each do |school| %>
+          <% @schools.order(beginning_year: :desc).each do |school| %>
             <tr>
+              <td><strong>Name:<br></strong></td>
+              <td><%= school.person.your_name %><br></td>
               <td><strong>School Name:<br></strong></td>
               <td><%= school.school_name %><br></td>
               <td><strong>School Start Date:<br></strong></td>
               <td><%= school.beginning_year %><br></td>
               <td><strong>School End Date:<br></strong></td>
-              <td><%= school.ending_year %><br></td>
+              <td><%= school.ending_year %><br><br><br></td>
             </tr>
           <% end %>
         </tbody>
       </p>
+<p>
+  <strong> Go fill out some forms! <br><br></strong>
+      <tbody>
+          <tr>
+            <td><%= link_to "Life Events", life_events_path %><br></td>
+            <td><%= link_to "Schools", schools_path %><br></td>
+            <td><%= link_to "People", people_path %><br><br><br></td>
+          </tr>
+      </tbody>
+    </p>
+
 
 </p>

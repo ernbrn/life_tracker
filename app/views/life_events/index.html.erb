@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Name</th>
       <th>Event title</th>
       <th>Date</th>
       <th>Description</th>
@@ -13,6 +14,7 @@
   <tbody>
     <% @life_events.each do |life_event| %>
       <tr>
+        <td><%= life_event.person.your_name %></td>
         <td><%= life_event.event_title %></td>
         <td><%= life_event.date %></td>
         <td><%= life_event.description %></td>
@@ -28,4 +30,4 @@
 
 <%= link_to 'New Life event', new_life_event_path %>
 
-<a href="/forms/">Back to Forms</a>
+<%= link_to "Back Home", root_path %>
