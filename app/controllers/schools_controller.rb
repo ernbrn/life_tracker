@@ -5,11 +5,13 @@ class SchoolsController < ApplicationController
   # GET /schools.json
   def index
     @schools = School.all
+    @person = Person.all
   end
 
   # GET /schools/1
   # GET /schools/1.json
   def show
+    @person = Person.all
   end
 
   # GET /schools/new
@@ -24,7 +26,7 @@ class SchoolsController < ApplicationController
   # POST /schools
   # POST /schools.json
   def create
-    @school = School.new(school_params)
+    @school = School.new(school_params, :order => "created_at DESC")
 
     respond_to do |format|
       if @school.save

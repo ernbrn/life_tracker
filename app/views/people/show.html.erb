@@ -6,29 +6,39 @@
 </p>
 
 <p>
-  <strong>School's Name</strong>
+  <strong>Life Events: <br><br></strong>
 
   <tbody>
     <% @life_events.each do |life_event| %>
       <tr>
-        <td><%= life_event.event_title %></td>
-        <td><%= life_event.date %></td>
-        <td><%= life_event.description %></td>
+        <td><strong>Event Name:<br></strong></td>
+        <td><%= life_event.event_title %><br></td>
+        <td><strong>Event Date:</strong><br></td>
+        <td><%= life_event.date %><br></td>
+        <td><strong>Event Description:</strong><br></td>
+        <td><%= life_event.description %><br></td>
         <%end %>
       </tbody>
+</p>
 
+
+<p>
+  <strong> Schools <br><br></strong>
       <tbody>
         <% @schools.each do |school| %>
           <tr>
-            <td><%= school.school_name %></td>
-            <td><%= school.beginning_year %></td>
-            <td><%= school.ending_year %></td>
+            <td><strong>School Name:<br></strong></td>
+            <td><%= school.school_name %><br></td>
+            <td><strong>School Start Date:<br></strong></td>
+            <td><%= school.beginning_year %><br></td>
+            <td><strong>School End Date:<br></strong></td>
+            <td><%= school.ending_year %><br></td>
           </tr>
         <% end %>
       </tbody>
+    </p>
 
 
 
 
-<%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Back', people_path %>
